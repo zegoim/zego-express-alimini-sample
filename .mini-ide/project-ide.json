@@ -1,0 +1,5 @@
+{
+  "enableLegacyRemoteDebug": false,
+  "ignoreHttpDomainCheck": false,
+  "ignoreWebViewDomainCheck": true
+}

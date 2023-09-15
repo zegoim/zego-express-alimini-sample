@@ -1,0 +1,34 @@
+<!--pages/setting/index.wxml-->
+
+<view class="settings">
+
+  <view class="items">
+      <label>AppID:</label>
+      <input onInput="inputChange" value="{{_appID}}" data-name="appID"/>
+  </view>
+
+  <view class="items">
+      <label>ServerURL:</label>
+      <input onInput="inputChange" value="{{_serverURL}}" data-name="serverURL"/>
+  </view>
+
+  <view class="items">
+      <label>UserID:</label>
+      <input onInput="inputChange" value="{{_userID}}" data-name="userID"/>
+  </view>
+
+  <view class="items">
+      <label>Token</label>
+      <input onInput="inputChange" value="{{_token}}" data-name="token" maxlength="1024"/>
+  </view>
+
+</view>
+
+
+<view class="handler">
+  <view class="buttonGroup">
+      <button onTap="submit" class="btn-block">确定</button>
+      <button onTap="reset" class="btn-block"> 重置</button>
+      
+  </view>
+</view>

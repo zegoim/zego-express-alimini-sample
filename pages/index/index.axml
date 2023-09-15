@@ -1,0 +1,19 @@
+<view class="mainUI">
+
+  <view class='tips'>
+      <text>本小程序展示即构科技实时音视频能力</text>
+  </view>
+  <button size="default" style="margin: 20rpx;" type="primary" onTap="downloadBundle"> android 手机需要点击下载 bundle </button>
+  <view class='guide-box'>
+      <view a:for="{{entryInfos}}" a:key="*this" id="{{index}}" class='guide' onTap='onEntryTap'>
+          <image class="guide_icon" src="{{item.icon}}" mode="aspectFit"/>
+          <view class="guide_label">{{item.title}}</view>
+          <view class="guide_label sub_title">{{item.subtitle}}</view>
+      </view>
+  </view>
+
+  <!-- <view class="settings">
+      <button a:if="{{canShow=='0'}}" open-type="openSetting" bindopensetting="settingCallback">授权使用摄像头和麦克风</button>
+  </view> -->
+
+</view>

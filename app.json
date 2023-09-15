@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/base/index",
+    "pages/message/index",
+    "pages/setting/index",
+    "pages/tokenRole/index"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  },
+  "permission": {
+    "scope.camera" : {
+      "desc" : "访问你的摄像头，用于视频通话"
+    },
+    "scope.record" : {
+      "desc" : "访问你的麦克风，用于音频通话"
+    }
+  }
+}

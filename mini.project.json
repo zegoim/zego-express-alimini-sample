@@ -1,0 +1,4 @@
+{
+  "enableAppxNg": true,
+  "node_modules_es6_whitelist": ["mod1","@alipay/mod2"]
+}

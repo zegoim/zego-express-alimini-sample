@@ -1,0 +1,59 @@
+<view>
+  <view class="containerBase">
+    <rtc-room
+      a:if="{{showRtcroom}}"
+      class="rtcContent"
+      id="{{rtcroomID}}"
+      roomId="{{rtcroom.roomId}}"
+      token="{{rtcroom.token}}"
+      userId="{{rtcroom.userId}}"
+      signature="{{rtcroom.signature}}"
+      autoplay="{{rtcroom.autoplay}}"
+      enable-camera="{{rtcroom.enableCamera}}"
+      fps="{{rtcroom.fps}}"
+      resolution="{{rtcroom.resolution}}"
+      record="{{rtcroom.record}}"
+      min-bitrate="{{rtcroom.minBitrate}}"
+      max-bitrate="{{rtcroom.maxBitrate}}"
+      extraInfo="{{rtcroom.extraInfo}}"
+      onError="onError"
+      onRoomInfo="onRoomInfo"
+      onParticipantEnter="onParticipantEnter"
+      onParticipantLeave="onParticipantLeave"
+      onAudioPlayoutMode="onAudioPlayoutMode"
+      onReceiveRecordId="onReceiveRecordId"
+      onRtmpEvent="onRtmpEvent"
+    />
+  </view>
+  <scroll-view class="message-view" scroll-y="true" scroll-into-view="{{scrollToView}}">
+    <view class="message-item" a:for="{{messageList}}" a:key="{{index}}" id="{{item.ID}}">
+      <view>
+        <text>{{item.name}}:</text>
+        {{item.content}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class="index-container">
+    <view class='input-container'>
+      <input value="{{roomID}}" onInput="bindKeyInput" placeholder="请输入房间 ID" placeholder-style='color: #b3b3b3; font-size: 14px;' class="room-input" />
+      <input value="{{message}}" onInput="bindMessageInput" confirm-type='send' onConfirm="sendMsg" placeholder="说点什么吧～" placeholder-style='color: #b3b3b3; font-size: 14px;' class="msg-input" />
+    </view>
+    <view>
+    
+    </view>
+    <view class="button-container">
+      <button type="primary" onTap="openRoom" data-role="1"  class="btn">
+        加入房间(推流)
+      </button>
+      <button type="primary" onTap="openRoom" data-role="0"  class="btn">
+        加入房间(不推流)
+      </button>
+      <button type="primary" onTap="sendMsg" class="btn">广播发送</button>
+      <button type="primary" onTap="sendBarrageMsg" class="btn">弹幕发送</button>
+      <button type="primary" onTap="sendCustomCommand" class="btn">指定发送</button>
+      <button type="primary" onTap="updateStreamExtra" class="btn">更新流附加信息</button>
+      <button type="primary" onTap="setRoomExtraInfo" class="btn">发送可靠消息</button>
+      <button type="primary" onTap="logout" class="btn">退出房间</button>
+    </view>
+  </view>
+</view>

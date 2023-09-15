@@ -1,0 +1,54 @@
+<view class="">
+  <view class="containerBase">
+    <rtc-room
+      a:if="{{showRtcroom}}"
+      class="rtcContent"
+      id="{{rtcroomID}}"
+      roomId="{{rtcroom.roomId}}"
+      token="{{rtcroom.token}}"
+      userId="{{rtcroom.userId}}"
+      signature="{{rtcroom.signature}}"
+      autoplay="{{rtcroom.autoplay}}"
+      enable-camera="{{rtcroom.enableCamera}}"
+      mute="{{rtcroom.mute}}"
+      fps="{{rtcroom.fps}}"
+      resolution="{{rtcroom.resolution}}"
+      record="{{rtcroom.record}}"
+      min-bitrate="{{rtcroom.minBitrate}}"
+      max-bitrate="{{rtcroom.maxBitrate}}"
+      extraInfo="{{rtcroom.extraInfo}}"
+      onError="onError"
+      onRoomInfo="onRoomInfo"
+      onParticipantEnter="onParticipantEnter"
+      onParticipantLeave="onParticipantLeave"
+      onAudioPlayoutMode="onAudioPlayoutMode"
+      onReceiveRecordId="onReceiveRecordId"
+      onRtmpEvent="onRtmpEvent"
+    />
+  </view>
+  <view class="index-container">
+    <view class='input-container'>
+      <input value="{{roomID}}" onInput="changeRoomid" data-role="roomID" placeholder="请输入房间 ID"
+        placeholder-style='color: #b3b3b3; font-size: 14px;' class="room-input" />
+      <text class="tip"></text>
+      <input value="{{userID}}" onInput="changeUserid" data-role="userID" placeholder="请输入用户 ID"
+        placeholder-style='color: #b3b3b3; font-size: 14px;' class="room-input" />
+      <text class="tip"></text>
+      <input value="{{token}}" onInput="changeToken" maxlength="-1" data-role="token" placeholder="请输入 token"
+        placeholder-style='color: #b3b3b3; font-size: 14px;' class="room-input" />
+      <text class="tip"></text>
+    </view>
+    <view class="button-container">
+      <button type="primary" onTap="openRoom" data-role="0" hover-class="none" class="btn">
+        加入房间(不推流)
+      </button>
+      <button type="primary" onTap="publishStream" data-role="1" hover-class="none" class="btn">
+        推流
+      </button>
+      <button type="primary" onTap="renewToken" data-role="1" hover-class="none" class="btn">
+        更新token
+      </button>
+      <button type="primary" onTap="logout" hover-class="none">退出房间</button>
+    </view>
+  </view>
+</view>

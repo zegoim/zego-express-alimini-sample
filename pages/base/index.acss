@@ -1,0 +1,35 @@
+.containerBase {
+  height: 73vh;
+  padding: 10rpx;
+}
+.rtcContent{
+  max-height: 800rpx;
+  max-width: 700rpx;
+}
+.body{
+  background-color: #fff;
+  padding-bottom: 60rpx;
+}
+
+.index-container {
+  border-top: 1px slategrey solid
+}
+.input-container{
+  text-align: center
+}
+.button-container{
+  border-top: 1px slategrey solid
+}
+.room-input {
+  height: 80rpx;
+  border-bottom:1px solid rgba(13, 112, 255, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  width: 48vw;
+  margin: 7rpx;
+}
+.logoutBtn {
+  margin: 7rpx;
+}
