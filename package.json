@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "query-string": "^8.1.0",
-    "zego-express-engine-miniprogram": "^2.12.2"
+    "query-string": "^8.1.0"
   }
 }
